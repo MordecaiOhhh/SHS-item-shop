@@ -1,0 +1,27 @@
+@charset "UTF-8";
+section {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.section--content {
+  max-width: 1440px;
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 36px;
+}
+.section--hero {
+  width: 100%;
+  height: auto;
+  min-height: 1100px;
+  background: url("/assets/images/background/Фон пещера.png");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.section--hero .hero--content-title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 120%;
+}
