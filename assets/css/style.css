@@ -30,16 +30,26 @@ input:focus {
   border: none;
 }
 
+img {
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important;
+  pointer-events: none;
+}
+
 main {
   height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: column;
 }
 
 section {
   width: 100%;
   max-width: 100%;
   height: auto;
+  margin-bottom: 96px;
 }
 
 .section--content {
@@ -50,8 +60,19 @@ section {
   padding: 0 15px;
   margin: 0 auto;
 }
+.section--header-wrapper {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
 .section--header-name {
   position: relative;
+  margin: 0;
   font-weight: 800;
   font-size: 48px;
   line-height: 56px;
@@ -60,18 +81,33 @@ section {
   text-align: center;
   background: linear-gradient(180deg, #dbe5ff 0%, #cddbff 27.6%, #9eb7f9 59.9%, #4868b9 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.5019607843);
   background-clip: text;
   text-fill-color: transparent;
   text-shadow: 0px -2.00111px 8.00442px rgba(133, 152, 255, 0.46), 0px 6.00332px 8.00442px rgba(20, 22, 72, 0.87);
 }
 .section--header-name::after, .section--header-name::before {
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
+  width: 92px;
+  height: 22px;
   margin: auto 0;
 }
+.section--header-name::before {
+  left: -110px;
+  background: url("/assets/images/arrow_left.svg");
+  background-size: 92px 22px;
+}
+.section--header-name::after {
+  right: -110px;
+  background: url("/assets/images/arrow_right.svg");
+  background-size: 92px 22px;
+}
 .section--header-description {
+  max-width: 849.26px;
+  margin: 0;
   font-weight: 500;
   font-size: 24px;
   line-height: 120%;
@@ -85,6 +121,7 @@ section {
   width: 100%;
   height: auto;
   min-height: 1100px;
+  margin-bottom: -380px;
   background: url("/assets/images/background/Фон пещера.png");
   background-position: center -40px;
   background-size: 100% 100%;
@@ -158,6 +195,7 @@ section {
   margin-bottom: 24px;
 }
 .section--hero .hero--form-input {
+  width: 300px;
   background: #111044;
   box-shadow: 3px -2px 7px rgba(195, 22, 255, 0.35), inset 0px 0px 10px rgba(193, 138, 237, 0.54), inset 0px 0px 0px 1px rgba(192, 138, 237, 0.955);
   -webkit-backdrop-filter: blur(12px);
@@ -206,17 +244,55 @@ section {
   font-feature-settings: "pnum" on, "lnum" on;
   color: #8a86bf;
 }
-.section--hero .hero--form-submit span {
-  z-index: 2;
-  position: relative;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  font-feature-settings: "pnum" on, "lnum" on;
-  font-weight: 700;
-  font-size: 18px;
-  color: #dddcff;
-  text-shadow: 0px -1.98765px 3.9753px rgba(255, 255, 255, 0.71), 0px 0.993826px 0.993826px rgba(40, 46, 108, 0.65), 0px 1.98765px 1.98765px rgba(42, 29, 96, 0.67);
+.section--ametist {
+  width: 100%;
+  height: auto;
+  min-height: 1100px;
+  margin-bottom: -520px;
+  background: url("/assets/images/background/Фон космос.png");
+  background-position: center -40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.section--elecsir {
+  width: 100%;
+  height: auto;
+  min-height: 1100px;
+  margin-bottom: -380px;
+}
+.section--amulet {
+  width: 100%;
+  height: auto;
+  min-height: 1100px;
+  margin-bottom: -380px;
+  background: url("/assets/images/background/transparent stars.png");
+  background-position: center -40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.section--payment {
+  width: 100%;
+  height: auto;
+  min-height: 1100px;
+  margin-bottom: -520px;
+  background: url("/assets/images/background/Фон оплаты.png");
+  background-position: center -40px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.section--varanty {
+  width: 100%;
+  height: auto;
+}
+.section--feedback {
+  width: 100%;
+  height: auto;
+  min-height: 1100px;
+  margin-bottom: -520px;
+  background: url("/assets/images/background/Фон Форма обратной связи.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .button-cristal {
@@ -239,8 +315,19 @@ section {
           user-select: text;
   box-shadow: 0px 2.98148px 7.17207px rgba(0, 0, 0, 0.32), 0px 0px 8.86871px rgba(0, 0, 0, 0.4);
 }
-.button-cristal-blink {
-  z-index: 1;
+.button-cristal span {
+  z-index: 3;
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-feature-settings: "pnum" on, "lnum" on;
+  font-weight: 700;
+  font-size: 18px;
+  color: #dddcff;
+  text-shadow: 0px -1.98765px 3.9753px rgba(255, 255, 255, 0.71), 0px 0.993826px 0.993826px rgba(40, 46, 108, 0.65), 0px 1.98765px 1.98765px rgba(42, 29, 96, 0.67);
+}
+.button-cristal-stars, .button-cristal-blink {
   position: absolute;
   left: 0;
   top: 0;
@@ -248,6 +335,13 @@ section {
   width: 189px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.button-cristal-stars {
+  z-index: 2;
+  mix-blend-mode: screen;
+}
+.button-cristal-blink {
+  z-index: 1;
 }
 
 header {

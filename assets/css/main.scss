@@ -27,3 +27,8 @@ input {
 		border: none;
 	}
 }
+
+img {
+	user-select: none !important;
+	pointer-events: none;
+}
