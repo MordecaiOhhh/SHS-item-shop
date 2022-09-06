@@ -49,7 +49,6 @@ section {
   width: 100%;
   max-width: 100%;
   height: auto;
-  margin-bottom: 96px;
 }
 
 .section--content {
@@ -64,7 +63,7 @@ section {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 0 auto;
+  margin: 74px auto 50px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -263,31 +262,119 @@ section {
 .section--amulet {
   width: 100%;
   height: auto;
-  min-height: 1100px;
+  min-height: 1226px;
   margin-bottom: -380px;
-  background: url("/assets/images/background/transparent stars.png");
+  background: url("/assets/images/background/Фон звезды.png");
   background-position: center -40px;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .section--payment {
+  position: relative;
   width: 100%;
   height: auto;
   min-height: 1100px;
-  margin-bottom: -520px;
   background: url("/assets/images/background/Фон оплаты.png");
   background-position: center -40px;
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
+.section--payment-devider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.section--payment-devider.top {
+  top: -22px;
+}
+.section--payment-devider.bottom {
+  bottom: -22px;
+}
+.section--payment-devider-line::before, .section--payment-devider-line::after {
+  content: "";
+  position: absolute;
+  width: calc(50% - 120px);
+  height: 1px;
+  background: #404e88;
+}
+.section--payment-devider-line::before {
+  left: 0;
+}
+.section--payment-devider-line::after {
+  right: 0;
+}
+.section--payment-devider-line.top::before, .section--payment-devider-line.top::after {
+  top: 0;
+}
+.section--payment-devider-line.bottom::before, .section--payment-devider-line.bottom::after {
+  bottom: 0;
+}
+.section--payment .payment--step-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 64px;
+}
+.section--payment .payment--step-item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.section--payment .payment--step-item-image {
+  width: 260px;
+}
+.section--payment .payment--step-item-text {
+  max-width: 100%;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 120%;
+  /* or 34px */
+  text-align: center;
+  font-feature-settings: "pnum" on, "lnum" on;
+  /* Text/Color1 */
+  color: #bbb8e2;
+  text-shadow: 0px 9px 15px #0b1836, 0px 4px 4px rgba(0, 0, 0, 0.6);
+}
+.section--payment .varanty--list-wrapper {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+.section--payment .varanty--list-item {
+  display: flex;
+  flex-direction: row;
+  gap: 54px;
+  align-items: center;
+}
+.section--payment .varanty--item-image {
+  width: 88px;
+  height: 88px;
+  display: flex;
+}
+.section--payment .varanty--item-text {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #ccd1f7;
+}
 .section--varanty {
+  z-index: 2;
   width: 100%;
   height: auto;
 }
 .section--feedback {
   width: 100%;
   height: auto;
-  min-height: 1100px;
+  min-height: 944px;
   margin-bottom: -520px;
   background: url("/assets/images/background/Фон Форма обратной связи.png");
   background-position: center;
