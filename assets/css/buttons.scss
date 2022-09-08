@@ -23,7 +23,8 @@
 		box-shadow: 0px 2.98148px 7.17207px rgba(0, 0, 0, 0.32),
 			0px 0px 8.86871px rgba(0, 0, 0, 0.4);
 
-		border-radius: 44px;
+		border-radius: 100px;
+		overflow: hidden;
 
 		pointer-events: all;
 		user-select: text;
@@ -68,6 +69,31 @@
 		}
 		&-blink {
 			z-index: 1;
+		}
+
+		&-pretty {
+			&::after,
+			&::before {
+				content: '';
+				z-index: 10;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				margin: auto 0;
+				height: 36px;
+				width: 19px;
+			}
+
+			&::after {
+				right: -2px;
+				background: url('/assets/images/button\ border\ right.svg');
+				background-size: 19px 36px;
+			}
+			&::before {
+				left: -2px;
+				background: url('/assets/images/button\ border\ left.svg');
+				background-size: 19px 36px;
+			}
 		}
 	}
 }

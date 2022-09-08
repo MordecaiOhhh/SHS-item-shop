@@ -102,7 +102,7 @@ section {
 		min-height: 1100px;
 
 		// растояние поднятое для следующего блока
-		margin-bottom: -380px;
+		margin-bottom: -430px;
 
 		background: url('/assets/images/background/Фон\ пещера.png');
 		background-position: center -40px;
@@ -238,6 +238,196 @@ section {
 		}
 	}
 
+	&--pack {
+		width: 100%;
+		height: auto;
+
+		&-content {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.pack {
+			&--list {
+				//
+				&-wrapper {
+					width: 100%;
+				}
+
+				&-item {
+					position: relative;
+					max-width: 410px;
+					width: 410px;
+					min-height: 172px;
+
+					border-radius: 30px;
+					overflow: hidden;
+					background: linear-gradient(
+						249.84deg,
+						rgba(252, 93, 217, 0.4) 3.31%,
+						rgba(232, 38, 208, 0.4) 13.49%,
+						rgba(139, 35, 194, 0.4) 42.38%,
+						rgba(101, 73, 207, 0.4) 66.57%,
+						rgba(35, 123, 255, 0.4) 96.16%
+					);
+					backdrop-filter: blur(14.0171px);
+
+					box-shadow: 3.50427px -3.50427px 8.17664px rgba(195, 22, 255, 0.35),
+						0px 4.67236px 4.67236px rgba(0, 0, 0, 0.25),
+						inset 0px 0px 4.67236px rgba(255, 255, 255, 0.5),
+						inset 0px 0px 16.3533px rgba(193, 138, 237, 0.54),
+						inset 0px 0px 70.0855px rgba(24, 8, 69, 0.16);
+
+					&-wrapper {
+					}
+					&-header {
+						z-index: 2;
+						position: relative;
+						padding: 8px 20px 16px 20px;
+						border-bottom: 2px solid #ffffff10;
+
+						background: linear-gradient(
+							249.84deg,
+							rgba(252, 93, 217, 0.2) 3.31%,
+							rgba(232, 38, 208, 0.2) 13.49%,
+							rgba(139, 35, 194, 0.2) 42.38%,
+							rgba(101, 73, 207, 0.2) 66.57%,
+							rgba(35, 123, 255, 0.2) 96.16%
+						);
+						backdrop-filter: blur(14.0171px);
+					}
+				}
+			}
+
+			&--item {
+				&-name {
+					width: fit-content;
+					margin: 0 auto;
+
+					z-index: 3;
+					position: relative;
+					font-weight: 700;
+					font-size: 28px;
+					line-height: 38px;
+					display: flex;
+					align-items: center;
+					text-align: center;
+					font-feature-settings: 'pnum' on, 'lnum' on;
+
+					color: #ccd1f7;
+
+					text-shadow: 0px -1.16809px 5px rgba(250, 194, 255, 0.39);
+					text-align: center;
+				}
+				&-description {
+					width: fit-content;
+					margin: 0 auto;
+
+					z-index: 3;
+					position: relative;
+					font-weight: 400;
+					font-size: 21px;
+					line-height: 19px;
+					/* or 85% */
+
+					text-align: center;
+					letter-spacing: 0.02em;
+					font-feature-settings: 'pnum' on, 'lnum' on;
+
+					color: #edbbf5;
+				}
+
+				&-content {
+					&-wrapper {
+						padding: 14px 26px 18px 26px;
+						box-sizing: border-box;
+
+						button {
+							z-index: 1;
+							position: relative;
+						}
+					}
+					&-image {
+						pointer-events: none;
+						max-width: 100%;
+						max-height: 100%;
+						&-wrapper {
+							pointer-events: none;
+							position: absolute;
+							right: 10px;
+							bottom: 40px;
+
+							width: auto;
+							height: 141px;
+						}
+
+						&-bg {
+							z-index: 1;
+							position: absolute;
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							top: 0;
+							left: 0;
+						}
+					}
+
+					&-list {
+						&-title {
+							font-weight: 600;
+							font-size: 17px;
+							line-height: 19px;
+							/* or 110% */
+
+							letter-spacing: 0.02em;
+							font-feature-settings: 'pnum' on, 'lnum' on;
+
+							color: #d1ceef;
+						}
+						&-wrapper {
+							z-index: 1;
+							position: relative;
+							display: flex;
+							flex-direction: column;
+							gap: 8px;
+						}
+
+						display: flex;
+						flex-direction: column;
+						gap: 4px;
+						margin-bottom: 10px;
+
+						padding-left: 8px;
+						&-item {
+							font-size: 15px;
+							line-height: 20px;
+							/* or 19px */
+
+							font-feature-settings: 'pnum' on, 'lnum' on;
+
+							color: #9d96ec;
+
+							list-style: none;
+							&::before {
+								content: '\2022';
+								color: #f97ecf;
+								font-size: 32px;
+								font-weight: bold;
+								display: inline-block;
+								align-items: center;
+								vertical-align: middle;
+								width: 21px;
+								margin-left: -10px;
+								margin-top: -6px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 	&--ametist {
 		width: 100%;
 		height: auto;
@@ -248,7 +438,7 @@ section {
 
 		background: url('/assets/images/background/Фон\ космос.png');
 		background-position: center -40px;
-		background-size: cover;
+		background-size: 100% 100%;
 		background-repeat: no-repeat;
 	}
 
@@ -271,7 +461,7 @@ section {
 
 		background: url('/assets/images/background/Фон\ звезды.png');
 		background-position: center -40px;
-		background-size: cover;
+		background-size: 100% 100%;
 		background-repeat: no-repeat;
 	}
 
@@ -280,10 +470,11 @@ section {
 		width: 100%;
 		height: auto;
 		min-height: 1100px;
+		padding-bottom: 64px;
 
 		background: url('/assets/images/background/Фон\ оплаты.png');
 		background-position: center -40px;
-		background-size: cover;
+		background-size: 100% 100%;
 		background-repeat: no-repeat;
 
 		&-devider {
@@ -335,34 +526,63 @@ section {
 					display: flex;
 					flex-direction: row;
 					gap: 64px;
+					justify-content: space-between;
 				}
 				&-item {
 					display: flex;
 					flex-direction: column;
 					gap: 24px;
 
-					&-image {
-						width: 260px;
-					}
-					&-text {
+					width: calc((100% / 3) - 64px);
+				}
+			}
+			&--item {
+				&-image {
+					&-wrapper {
+						position: relative;
 						max-width: 100%;
 
-						font-family: 'Raleway';
-						font-style: normal;
-						font-weight: 500;
-						font-size: 28px;
-						line-height: 120%;
-						/* or 34px */
-
-						text-align: center;
-						font-feature-settings: 'pnum' on, 'lnum' on;
-
-						/* Text/Color1 */
-
-						color: #bbb8e2;
-
-						text-shadow: 0px 9px 15px #0b1836, 0px 4px 4px rgba(0, 0, 0, 0.6);
+						&.devider {
+							&::after {
+								content: '';
+								position: absolute;
+								top: 0;
+								bottom: 0;
+								right: -72px;
+								margin: auto 0;
+								background-image: url('/assets/images/block/number\ devider.svg');
+								width: 48px;
+								height: 48px;
+								background-size: 48px 48px;
+								background-position: center;
+								background-repeat: no-repeat;
+							}
+						}
 					}
+					max-width: 100%;
+					filter: drop-shadow(
+							7.39568px -7.39568px 17.2566px rgba(195, 22, 255, 0.35)
+						)
+						drop-shadow(0px 9.86091px 9.86091px rgba(0, 0, 0, 0.25));
+				}
+				&-text {
+					max-width: 100%;
+
+					font-family: 'Raleway';
+					font-style: normal;
+					font-weight: 500;
+					font-size: 26px;
+					line-height: 120%;
+					/* or 34px */
+
+					text-align: center;
+					font-feature-settings: 'pnum' on, 'lnum' on;
+
+					/* Text/Color1 */
+
+					color: #bbb8e2;
+
+					text-shadow: 0px 9px 15px #0b1836, 0px 4px 4px rgba(0, 0, 0, 0.6);
 				}
 			}
 		}

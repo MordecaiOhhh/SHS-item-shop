@@ -10,7 +10,8 @@
   background-position: center center;
   background-repeat: no-repeat;
   box-shadow: 0px 2.98148px 7.17207px rgba(0, 0, 0, 0.32), 0px 0px 8.86871px rgba(0, 0, 0, 0.4);
-  border-radius: 44px;
+  border-radius: 100px;
+  overflow: hidden;
   pointer-events: all;
   -webkit-user-select: text;
      -moz-user-select: text;
@@ -45,4 +46,24 @@
 }
 .button-cristal-blink {
   z-index: 1;
+}
+.button-cristal-pretty::after, .button-cristal-pretty::before {
+  content: "";
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  height: 36px;
+  width: 19px;
+}
+.button-cristal-pretty::after {
+  right: -2px;
+  background: url("/assets/images/button border right.svg");
+  background-size: 19px 36px;
+}
+.button-cristal-pretty::before {
+  left: -2px;
+  background: url("/assets/images/button border left.svg");
+  background-size: 19px 36px;
 }

@@ -120,7 +120,7 @@ section {
   width: 100%;
   height: auto;
   min-height: 1100px;
-  margin-bottom: -380px;
+  margin-bottom: -430px;
   background: url("/assets/images/background/Фон пещера.png");
   background-position: center -40px;
   background-size: 100% 100%;
@@ -243,6 +243,147 @@ section {
   font-feature-settings: "pnum" on, "lnum" on;
   color: #8a86bf;
 }
+.section--pack {
+  width: 100%;
+  height: auto;
+}
+.section--pack-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.section--pack .pack--list-wrapper {
+  width: 100%;
+}
+.section--pack .pack--list-item {
+  position: relative;
+  max-width: 410px;
+  width: 410px;
+  min-height: 172px;
+  border-radius: 30px;
+  overflow: hidden;
+  background: linear-gradient(249.84deg, rgba(252, 93, 217, 0.4) 3.31%, rgba(232, 38, 208, 0.4) 13.49%, rgba(139, 35, 194, 0.4) 42.38%, rgba(101, 73, 207, 0.4) 66.57%, rgba(35, 123, 255, 0.4) 96.16%);
+  -webkit-backdrop-filter: blur(14.0171px);
+          backdrop-filter: blur(14.0171px);
+  box-shadow: 3.50427px -3.50427px 8.17664px rgba(195, 22, 255, 0.35), 0px 4.67236px 4.67236px rgba(0, 0, 0, 0.25), inset 0px 0px 4.67236px rgba(255, 255, 255, 0.5), inset 0px 0px 16.3533px rgba(193, 138, 237, 0.54), inset 0px 0px 70.0855px rgba(24, 8, 69, 0.16);
+}
+.section--pack .pack--list-item-header {
+  z-index: 2;
+  position: relative;
+  padding: 8px 20px 16px 20px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.062745098);
+  background: linear-gradient(249.84deg, rgba(252, 93, 217, 0.2) 3.31%, rgba(232, 38, 208, 0.2) 13.49%, rgba(139, 35, 194, 0.2) 42.38%, rgba(101, 73, 207, 0.2) 66.57%, rgba(35, 123, 255, 0.2) 96.16%);
+  -webkit-backdrop-filter: blur(14.0171px);
+          backdrop-filter: blur(14.0171px);
+}
+.section--pack .pack--item-name {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  z-index: 3;
+  position: relative;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #ccd1f7;
+  text-shadow: 0px -1.16809px 5px rgba(250, 194, 255, 0.39);
+  text-align: center;
+}
+.section--pack .pack--item-description {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  z-index: 3;
+  position: relative;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 19px;
+  /* or 85% */
+  text-align: center;
+  letter-spacing: 0.02em;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #edbbf5;
+}
+.section--pack .pack--item-content-wrapper {
+  padding: 14px 26px 18px 26px;
+  box-sizing: border-box;
+}
+.section--pack .pack--item-content-wrapper button {
+  z-index: 1;
+  position: relative;
+}
+.section--pack .pack--item-content-image {
+  pointer-events: none;
+  max-width: 100%;
+  max-height: 100%;
+}
+.section--pack .pack--item-content-image-wrapper {
+  pointer-events: none;
+  position: absolute;
+  right: 10px;
+  bottom: 40px;
+  width: auto;
+  height: 141px;
+}
+.section--pack .pack--item-content-image-bg {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  left: 0;
+}
+.section--pack .pack--item-content-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 10px;
+  padding-left: 8px;
+}
+.section--pack .pack--item-content-list-title {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 19px;
+  /* or 110% */
+  letter-spacing: 0.02em;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #d1ceef;
+}
+.section--pack .pack--item-content-list-wrapper {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.section--pack .pack--item-content-list-item {
+  font-size: 15px;
+  line-height: 20px;
+  /* or 19px */
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #9d96ec;
+  list-style: none;
+}
+.section--pack .pack--item-content-list-item::before {
+  content: "•";
+  color: #f97ecf;
+  font-size: 32px;
+  font-weight: bold;
+  display: inline-block;
+  align-items: center;
+  vertical-align: middle;
+  width: 21px;
+  margin-left: -10px;
+  margin-top: -6px;
+}
 .section--ametist {
   width: 100%;
   height: auto;
@@ -250,7 +391,7 @@ section {
   margin-bottom: -520px;
   background: url("/assets/images/background/Фон космос.png");
   background-position: center -40px;
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 .section--elecsir {
@@ -266,7 +407,7 @@ section {
   margin-bottom: -380px;
   background: url("/assets/images/background/Фон звезды.png");
   background-position: center -40px;
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 .section--payment {
@@ -274,9 +415,10 @@ section {
   width: 100%;
   height: auto;
   min-height: 1100px;
+  padding-bottom: 64px;
   background: url("/assets/images/background/Фон оплаты.png");
   background-position: center -40px;
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 .section--payment-devider {
@@ -314,21 +456,42 @@ section {
   display: flex;
   flex-direction: row;
   gap: 64px;
+  justify-content: space-between;
 }
 .section--payment .payment--step-item {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  width: calc(33.3333333333% - 64px);
 }
-.section--payment .payment--step-item-image {
-  width: 260px;
+.section--payment .payment--item-image {
+  max-width: 100%;
+  filter: drop-shadow(7.39568px -7.39568px 17.2566px rgba(195, 22, 255, 0.35)) drop-shadow(0px 9.86091px 9.86091px rgba(0, 0, 0, 0.25));
 }
-.section--payment .payment--step-item-text {
+.section--payment .payment--item-image-wrapper {
+  position: relative;
+  max-width: 100%;
+}
+.section--payment .payment--item-image-wrapper.devider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -72px;
+  margin: auto 0;
+  background-image: url("/assets/images/block/number devider.svg");
+  width: 48px;
+  height: 48px;
+  background-size: 48px 48px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.section--payment .payment--item-text {
   max-width: 100%;
   font-family: "Raleway";
   font-style: normal;
   font-weight: 500;
-  font-size: 28px;
+  font-size: 26px;
   line-height: 120%;
   /* or 34px */
   text-align: center;
@@ -394,7 +557,8 @@ section {
   background-position: center center;
   background-repeat: no-repeat;
   box-shadow: 0px 2.98148px 7.17207px rgba(0, 0, 0, 0.32), 0px 0px 8.86871px rgba(0, 0, 0, 0.4);
-  border-radius: 44px;
+  border-radius: 100px;
+  overflow: hidden;
   pointer-events: all;
   -webkit-user-select: text;
      -moz-user-select: text;
@@ -429,6 +593,26 @@ section {
 }
 .button-cristal-blink {
   z-index: 1;
+}
+.button-cristal-pretty::after, .button-cristal-pretty::before {
+  content: "";
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  height: 36px;
+  width: 19px;
+}
+.button-cristal-pretty::after {
+  right: -2px;
+  background: url("/assets/images/button border right.svg");
+  background-size: 19px 36px;
+}
+.button-cristal-pretty::before {
+  left: -2px;
+  background: url("/assets/images/button border left.svg");
+  background-size: 19px 36px;
 }
 
 header {
