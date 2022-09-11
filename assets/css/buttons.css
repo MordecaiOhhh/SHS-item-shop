@@ -13,11 +13,17 @@
   border-radius: 100px;
   overflow: hidden;
   pointer-events: all;
-  -webkit-user-select: text;
-     -moz-user-select: text;
-      -ms-user-select: text;
-          user-select: text;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
   box-shadow: 0px 2.98148px 7.17207px rgba(0, 0, 0, 0.32), 0px 0px 8.86871px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.67, 0.19, 0.43, 1.02);
+  transition-property: transform;
+}
+.button-cristal:hover {
+  transform: translateY(-8px);
 }
 .button-cristal span {
   z-index: 3;

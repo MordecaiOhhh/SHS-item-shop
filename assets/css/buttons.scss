@@ -27,10 +27,17 @@
 		overflow: hidden;
 
 		pointer-events: all;
-		user-select: text;
+		user-select: none;
+		cursor: pointer;
 
 		box-shadow: 0px 2.98148px 7.17207px rgba(0, 0, 0, 0.32),
 			0px 0px 8.86871px rgba(0, 0, 0, 0.4);
+
+		transition: all .4s cubic-bezier(0.67, 0.19, 0.43, 1.02);
+		transition-property: transform ;
+		&:hover {
+			transform: translateY(-8px);
+		}
 
 		span {
 			z-index: 3;

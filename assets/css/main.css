@@ -35,3 +35,35 @@ img {
           user-select: none !important;
   pointer-events: none;
 }
+
+.go-button-prev, .go-button-next {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.go-button-prev::after, .go-button-next::after {
+  content: none;
+}
+.go-button-prev:hover, .go-button-next:hover {
+  transform: scale(1.14);
+}
+.go-button-prev {
+  left: -24px;
+  background: url("/assets/images/icons/arrow left.svg");
+  background-size: 48px 48px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.go-button-next {
+  right: -24px;
+  background: url("/assets/images/icons/arrow right.svg");
+  background-size: 48px 48px;
+  background-position: center;
+  background-repeat: no-repeat;
+}

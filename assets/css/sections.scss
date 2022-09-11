@@ -11,7 +11,7 @@ section {
 	max-width: 100%;
 	height: auto;
 }
-.section {
+.section {	
 	&--content {
 		width: 1100px;
 		height: fit-content;
@@ -102,7 +102,7 @@ section {
 		min-height: 1100px;
 
 		// растояние поднятое для следующего блока
-		margin-bottom: -430px;
+		margin-bottom: -440px;
 
 		background: url('/assets/images/background/Фон\ пещера.png');
 		background-position: center -40px;
@@ -241,18 +241,23 @@ section {
 	&--pack {
 		width: 100%;
 		height: auto;
-
-		&-content {
-			width: 100%;
-			display: flex;
-			flex-direction: column;
-		}
+		margin-bottom: 32px;
 
 		.pack {
+			&--content {
+				width: 1320px;
+				display: flex;
+				flex-direction: column;
+				position: relative;
+			}
 			&--list {
-				//
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
 				&-wrapper {
-					width: 100%;
+					width: 1290px;
+					padding: 24px 24px;
+					box-sizing: border-box;
 				}
 
 				&-item {
@@ -295,7 +300,7 @@ section {
 							rgba(101, 73, 207, 0.2) 66.57%,
 							rgba(35, 123, 255, 0.2) 96.16%
 						);
-						backdrop-filter: blur(14.0171px);
+						backdrop-filter: blur(1.5px);
 					}
 				}
 			}
@@ -370,6 +375,7 @@ section {
 							object-fit: cover;
 							top: 0;
 							left: 0;
+							mix-blend-mode: lighten;
 						}
 					}
 
@@ -431,15 +437,98 @@ section {
 	&--ametist {
 		width: 100%;
 		height: auto;
-		min-height: 1100px;
-
-		// растояние поднятое для следующего блока
-		margin-bottom: -520px;
+		min-height: 1150px;
+		margin-bottom: -392px;
 
 		background: url('/assets/images/background/Фон\ космос.png');
-		background-position: center -40px;
-		background-size: 100% 100%;
+		background-position: center 92px;
+		background-size: 100%;
 		background-repeat: no-repeat;
+
+		.ametist {
+			&--content {
+				width: 1305px;
+				display: flex;
+				flex-direction: column;
+				position: relative;
+			}
+			&--list {
+				box-sizing: border-box;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				&-wrapper {
+					width: 1290px;
+					padding: 24px 24px;
+					box-sizing: border-box;
+				}
+
+				&-item {
+					&-wrapper {
+						height: 100%;
+					}
+					position: relative;
+					max-width: 300px;
+					width: 300px;
+					min-height: 392px;
+					height: 392px;
+
+					border-radius: 30px;
+					overflow: hidden;
+					background: url('/assets/images/Фон карточка вертикальная.svg');
+					box-shadow: 5.38796px -5.38796px 12.5719px rgba(195, 22, 255, 0.35), 0px 7.18395px 7.18395px rgba(0, 0, 0, 0.25), inset 0px 0px 17.9599px rgba(193, 138, 237, 0.54);
+				}
+			}
+
+			&--item {
+				&-content {
+					&-wrapper {
+						height: 100%;
+						box-sizing: border-box;
+						padding: 26px;
+						display: flex;
+						flex-direction: column;
+						align-items: space-between;
+
+						.button-cristal {
+							margin: 0 auto;
+						}
+					}
+					&-multiply {
+						text-align: center;
+						margin-bottom: auto;
+						font-family: 'Raleway';
+						font-style: normal;
+						font-weight: 700;
+						font-size: 28px;
+						line-height: 33px;
+						font-feature-settings: 'pnum' on, 'lnum' on;
+
+						/* Text/Header 1 */
+
+						color: #CCD1F7;
+
+					}
+					&-image {
+						&-item {
+							width: 224px;
+							height: 224px;
+							object-fit: contain;
+							margin: auto auto;
+						}
+						&-bg {
+							z-index: 1;
+							left: 0;
+							top: 0;
+							position: absolute;
+							mix-blend-mode: screen;
+							backdrop-filter: none;
+							opacity: .4;
+						}
+					}
+				}
+			}
+		}
 	}
 
 	&--elecsir {
@@ -449,6 +538,91 @@ section {
 
 		// растояние поднятое для следующего блока
 		margin-bottom: -380px;
+
+		.elecsir {
+			&--content {
+				width: 1305px;
+				display: flex;
+				flex-direction: column;
+				position: relative;
+			}
+			&--list {
+				box-sizing: border-box;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				&-wrapper {
+					width: 1290px;
+					padding: 24px 24px;
+					box-sizing: border-box;
+				}
+
+				&-item {
+					&-wrapper {
+						height: 100%;
+					}
+					position: relative;
+					max-width: 300px;
+					width: 300px;
+					min-height: 392px;
+					height: 392px;
+
+					border-radius: 30px;
+					overflow: hidden;
+					background: url('/assets/images/Фон карточка вертикальная.svg');
+					box-shadow: 5.38796px -5.38796px 12.5719px rgba(195, 22, 255, 0.35), 0px 7.18395px 7.18395px rgba(0, 0, 0, 0.25), inset 0px 0px 17.9599px rgba(193, 138, 237, 0.54);
+				}
+			}
+
+			&--item {
+				&-content {
+					&-wrapper {
+						height: 100%;
+						box-sizing: border-box;
+						padding: 26px;
+						display: flex;
+						flex-direction: column;
+						align-items: space-between;
+
+						.button-cristal {
+							margin: 0 auto;
+						}
+					}
+					&-multiply {
+						text-align: center;
+						margin-bottom: auto;
+						font-family: 'Raleway';
+						font-style: normal;
+						font-weight: 700;
+						font-size: 28px;
+						line-height: 33px;
+						font-feature-settings: 'pnum' on, 'lnum' on;
+
+						/* Text/Header 1 */
+
+						color: #CCD1F7;
+
+					}
+					&-image {
+						&-item {
+							width: 224px;
+							height: 224px;
+							object-fit: contain;
+							margin: auto auto;
+						}
+						&-bg {
+							z-index: 1;
+							left: 0;
+							top: 0;
+							position: absolute;
+							mix-blend-mode: screen;
+							backdrop-filter: none;
+							opacity: .4;
+						}
+					}
+				}
+			}
+		}
 	}
 
 	&--amulet {
@@ -463,6 +637,91 @@ section {
 		background-position: center -40px;
 		background-size: 100% 100%;
 		background-repeat: no-repeat;
+
+		.amulet {
+			&--content {
+				width: 1305px;
+				display: flex;
+				flex-direction: column;
+				position: relative;
+			}
+			&--list {
+				box-sizing: border-box;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				&-wrapper {
+					width: 1290px;
+					padding: 24px 24px;
+					box-sizing: border-box;
+				}
+
+				&-item {
+					&-wrapper {
+						height: 100%;
+					}
+					position: relative;
+					max-width: 300px;
+					width: 300px;
+					min-height: 392px;
+					height: 392px;
+
+					border-radius: 30px;
+					overflow: hidden;
+					background: url('/assets/images/Фон карточка вертикальная.svg');
+					box-shadow: 5.38796px -5.38796px 12.5719px rgba(195, 22, 255, 0.35), 0px 7.18395px 7.18395px rgba(0, 0, 0, 0.25), inset 0px 0px 17.9599px rgba(193, 138, 237, 0.54);
+				}
+			}
+
+			&--item {
+				&-content {
+					&-wrapper {
+						height: 100%;
+						box-sizing: border-box;
+						padding: 26px;
+						display: flex;
+						flex-direction: column;
+						align-items: space-between;
+
+						.button-cristal {
+							margin: 0 auto;
+						}
+					}
+					&-multiply {
+						text-align: center;
+						margin-bottom: auto;
+						font-family: 'Raleway';
+						font-style: normal;
+						font-weight: 700;
+						font-size: 28px;
+						line-height: 33px;
+						font-feature-settings: 'pnum' on, 'lnum' on;
+
+						/* Text/Header 1 */
+
+						color: #CCD1F7;
+
+					}
+					&-image {
+						&-item {
+							width: 224px;
+							height: 224px;
+							object-fit: contain;
+							margin: auto auto;
+						}
+						&-bg {
+							z-index: 1;
+							left: 0;
+							top: 0;
+							position: absolute;
+							mix-blend-mode: screen;
+							backdrop-filter: none;
+							opacity: .4;
+						}
+					}
+				}
+			}
+		}
 	}
 
 	&--payment {
@@ -647,5 +906,38 @@ section {
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
+
+		.feedback {
+			&--content {
+				width: 1320px;
+				display: flex;
+				flex-direction: row;
+				align-items: stretch;
+				position: relative;
+
+
+				&-text {
+					font-weight: 400;
+					font-size: 18px;
+					line-height: 92%;
+
+					font-feature-settings: 'pnum' on, 'lnum' on;
+
+
+					color: #CCD1F7;
+				}
+			}
+
+			&--column {
+				width: 50%;
+				max-width: 50%;
+				height: auto;
+
+				display: flex;
+				flex-direction: column;
+			}
+ 
+		}
 	}
 }
+

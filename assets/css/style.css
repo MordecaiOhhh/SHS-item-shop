@@ -38,6 +38,38 @@ img {
   pointer-events: none;
 }
 
+.go-button-prev, .go-button-next {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.go-button-prev::after, .go-button-next::after {
+  content: none;
+}
+.go-button-prev:hover, .go-button-next:hover {
+  transform: scale(1.14);
+}
+.go-button-prev {
+  left: -24px;
+  background: url("/assets/images/icons/arrow left.svg");
+  background-size: 48px 48px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.go-button-next {
+  right: -24px;
+  background: url("/assets/images/icons/arrow right.svg");
+  background-size: 48px 48px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 main {
   height: 100%;
   width: 100%;
@@ -120,7 +152,7 @@ section {
   width: 100%;
   height: auto;
   min-height: 1100px;
-  margin-bottom: -430px;
+  margin-bottom: -440px;
   background: url("/assets/images/background/Фон пещера.png");
   background-position: center -40px;
   background-size: 100% 100%;
@@ -246,14 +278,23 @@ section {
 .section--pack {
   width: 100%;
   height: auto;
+  margin-bottom: 32px;
 }
-.section--pack-content {
-  width: 100%;
+.section--pack .pack--content {
+  width: 1320px;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+.section--pack .pack--list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .section--pack .pack--list-wrapper {
-  width: 100%;
+  width: 1290px;
+  padding: 24px 24px;
+  box-sizing: border-box;
 }
 .section--pack .pack--list-item {
   position: relative;
@@ -273,8 +314,8 @@ section {
   padding: 8px 20px 16px 20px;
   border-bottom: 2px solid rgba(255, 255, 255, 0.062745098);
   background: linear-gradient(249.84deg, rgba(252, 93, 217, 0.2) 3.31%, rgba(232, 38, 208, 0.2) 13.49%, rgba(139, 35, 194, 0.2) 42.38%, rgba(101, 73, 207, 0.2) 66.57%, rgba(35, 123, 255, 0.2) 96.16%);
-  -webkit-backdrop-filter: blur(14.0171px);
-          backdrop-filter: blur(14.0171px);
+  -webkit-backdrop-filter: blur(1.5px);
+          backdrop-filter: blur(1.5px);
 }
 .section--pack .pack--item-name {
   width: -webkit-fit-content;
@@ -340,6 +381,7 @@ section {
      object-fit: cover;
   top: 0;
   left: 0;
+  mix-blend-mode: lighten;
 }
 .section--pack .pack--item-content-list {
   display: flex;
@@ -387,18 +429,160 @@ section {
 .section--ametist {
   width: 100%;
   height: auto;
-  min-height: 1100px;
-  margin-bottom: -520px;
+  min-height: 1150px;
+  margin-bottom: -392px;
   background: url("/assets/images/background/Фон космос.png");
-  background-position: center -40px;
-  background-size: 100% 100%;
+  background-position: center 92px;
+  background-size: 100%;
   background-repeat: no-repeat;
+}
+.section--ametist .ametist--content {
+  width: 1305px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.section--ametist .ametist--list {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.section--ametist .ametist--list-wrapper {
+  width: 1290px;
+  padding: 24px 24px;
+  box-sizing: border-box;
+}
+.section--ametist .ametist--list-item {
+  position: relative;
+  max-width: 300px;
+  width: 300px;
+  min-height: 392px;
+  height: 392px;
+  border-radius: 30px;
+  overflow: hidden;
+  background: url("/assets/images/Фон карточка вертикальная.svg");
+  box-shadow: 5.38796px -5.38796px 12.5719px rgba(195, 22, 255, 0.35), 0px 7.18395px 7.18395px rgba(0, 0, 0, 0.25), inset 0px 0px 17.9599px rgba(193, 138, 237, 0.54);
+}
+.section--ametist .ametist--list-item-wrapper {
+  height: 100%;
+}
+.section--ametist .ametist--item-content-wrapper {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+.section--ametist .ametist--item-content-wrapper .button-cristal {
+  margin: 0 auto;
+}
+.section--ametist .ametist--item-content-multiply {
+  text-align: center;
+  margin-bottom: auto;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  /* Text/Header 1 */
+  color: #CCD1F7;
+}
+.section--ametist .ametist--item-content-image-item {
+  width: 224px;
+  height: 224px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: auto auto;
+}
+.section--ametist .ametist--item-content-image-bg {
+  z-index: 1;
+  left: 0;
+  top: 0;
+  position: absolute;
+  mix-blend-mode: screen;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+  opacity: 0.4;
 }
 .section--elecsir {
   width: 100%;
   height: auto;
   min-height: 1100px;
   margin-bottom: -380px;
+}
+.section--elecsir .elecsir--content {
+  width: 1305px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.section--elecsir .elecsir--list {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.section--elecsir .elecsir--list-wrapper {
+  width: 1290px;
+  padding: 24px 24px;
+  box-sizing: border-box;
+}
+.section--elecsir .elecsir--list-item {
+  position: relative;
+  max-width: 300px;
+  width: 300px;
+  min-height: 392px;
+  height: 392px;
+  border-radius: 30px;
+  overflow: hidden;
+  background: url("/assets/images/Фон карточка вертикальная.svg");
+  box-shadow: 5.38796px -5.38796px 12.5719px rgba(195, 22, 255, 0.35), 0px 7.18395px 7.18395px rgba(0, 0, 0, 0.25), inset 0px 0px 17.9599px rgba(193, 138, 237, 0.54);
+}
+.section--elecsir .elecsir--list-item-wrapper {
+  height: 100%;
+}
+.section--elecsir .elecsir--item-content-wrapper {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+.section--elecsir .elecsir--item-content-wrapper .button-cristal {
+  margin: 0 auto;
+}
+.section--elecsir .elecsir--item-content-multiply {
+  text-align: center;
+  margin-bottom: auto;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  /* Text/Header 1 */
+  color: #CCD1F7;
+}
+.section--elecsir .elecsir--item-content-image-item {
+  width: 224px;
+  height: 224px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: auto auto;
+}
+.section--elecsir .elecsir--item-content-image-bg {
+  z-index: 1;
+  left: 0;
+  top: 0;
+  position: absolute;
+  mix-blend-mode: screen;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+  opacity: 0.4;
 }
 .section--amulet {
   width: 100%;
@@ -409,6 +593,77 @@ section {
   background-position: center -40px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+.section--amulet .amulet--content {
+  width: 1305px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.section--amulet .amulet--list {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.section--amulet .amulet--list-wrapper {
+  width: 1290px;
+  padding: 24px 24px;
+  box-sizing: border-box;
+}
+.section--amulet .amulet--list-item {
+  position: relative;
+  max-width: 300px;
+  width: 300px;
+  min-height: 392px;
+  height: 392px;
+  border-radius: 30px;
+  overflow: hidden;
+  background: url("/assets/images/Фон карточка вертикальная.svg");
+  box-shadow: 5.38796px -5.38796px 12.5719px rgba(195, 22, 255, 0.35), 0px 7.18395px 7.18395px rgba(0, 0, 0, 0.25), inset 0px 0px 17.9599px rgba(193, 138, 237, 0.54);
+}
+.section--amulet .amulet--list-item-wrapper {
+  height: 100%;
+}
+.section--amulet .amulet--item-content-wrapper {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+.section--amulet .amulet--item-content-wrapper .button-cristal {
+  margin: 0 auto;
+}
+.section--amulet .amulet--item-content-multiply {
+  text-align: center;
+  margin-bottom: auto;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  /* Text/Header 1 */
+  color: #CCD1F7;
+}
+.section--amulet .amulet--item-content-image-item {
+  width: 224px;
+  height: 224px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: auto auto;
+}
+.section--amulet .amulet--item-content-image-bg {
+  z-index: 1;
+  left: 0;
+  top: 0;
+  position: absolute;
+  mix-blend-mode: screen;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+  opacity: 0.4;
 }
 .section--payment {
   position: relative;
@@ -544,6 +799,27 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.section--feedback .feedback--content {
+  width: 1320px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  position: relative;
+}
+.section--feedback .feedback--content-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 92%;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #CCD1F7;
+}
+.section--feedback .feedback--column {
+  width: 50%;
+  max-width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
 
 .button-cristal {
   position: relative;
@@ -560,11 +836,17 @@ section {
   border-radius: 100px;
   overflow: hidden;
   pointer-events: all;
-  -webkit-user-select: text;
-     -moz-user-select: text;
-      -ms-user-select: text;
-          user-select: text;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
   box-shadow: 0px 2.98148px 7.17207px rgba(0, 0, 0, 0.32), 0px 0px 8.86871px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.67, 0.19, 0.43, 1.02);
+  transition-property: transform;
+}
+.button-cristal:hover {
+  transform: translateY(-8px);
 }
 .button-cristal span {
   z-index: 3;
@@ -656,6 +938,7 @@ header {
   flex-direction: row;
   justify-content: center;
   padding: 15px 0;
+  transform: translateX(-3px);
 }
 .header--menu-list {
   height: -webkit-fit-content;
@@ -684,4 +967,5 @@ header {
   height: -moz-fit-content;
   height: fit-content;
   width: auto;
+  transform: translateX(-5px);
 }
